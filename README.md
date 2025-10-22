@@ -4,6 +4,8 @@ Codebook of NTU ICPC team [nobook](https://codeforces.com/team/177341)
 
 imo kactl is somehow out of date and hard to use, so let's modified from [std_abs's codebook](https://github.com/abc864197532/std_abs) !
 
+Current [Nobook](https://github.com/PsychoPinkQ/nobook/blob/build/codebook.pdf)
+
 # todo
 flow(dinic)
 CD
