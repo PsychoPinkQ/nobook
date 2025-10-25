@@ -8,9 +8,13 @@ Current [Nobook](https://github.com/PsychoPinkQ/nobook/blob/build/codebook.pdf)
 
 # todo
 flow(dinic)
+
 CD
+
 geo
+
 fix out of bound behaviours in string algorithms (especially manacher)
+
 know how to use the templates
 
 # Contest Result
