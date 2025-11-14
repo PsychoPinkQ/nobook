@@ -121,7 +121,7 @@ Poly PolyPow(Poly a, ll k) {
   if (m == n) return ans[0] = 1, ans;
   int lead = m * k;
   Poly b(a.begin() + m, a.end());
-  int base = Pow(b[0], k%(mod-1)), inv = Pow(b[0], mod - 2);
+  int base=Pow(b[0], k%(mod-1)), inv=Pow(b[0], mod-2);
   for (int i = 0; i < n - m; ++i)
     b[i] = mul(b[i], inv);
   b = Ln(b);
