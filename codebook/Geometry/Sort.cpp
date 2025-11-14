@@ -23,7 +23,7 @@ struct Seg {
 struct Polar_Seg {
   Pt a, b; // ori(Pt(0, 0), a, b) > 0
   bool operator < (const Polar_Seg &o) const {
-    if (a == o.a) return(o.b, a, b) == -1;
+    if (a == o.a) return ori(o.b, a, b) == -1;
     if (btwangle(Pt(0, 0), a, b, o.a, 0))
       return ori(o.a, a, b) == -1;
     return ori(a, o.a, o.b) == 1;
