@@ -7,8 +7,6 @@ imo kactl is somehow out of date and hard to use, so let's modified from [std_ab
 Current [Nobook](https://github.com/PsychoPinkQ/nobook/blob/build/codebook.pdf)
 
 # todo
-CD
-
 geo
 
 know how to use the templates and descide which should be keep 
