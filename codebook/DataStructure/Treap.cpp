@@ -23,7 +23,7 @@ void split(node *o, node *&a, node *&b, int k) {
   if (o->data <= k)
     a = o, split(o->r, a->r, b, k), a->up();
   else b = o, split(o->l, a, b->l, k), b->up();
-}
+} // 490612
 void split2(node *o, node *&a, node *&b, int k) {
   if (sz(o) <= k) return a = o, b = 0, void();
   o->down();
@@ -32,13 +32,21 @@ void split2(node *o, node *&a, node *&b, int k) {
   else b = o, split2(o->l, a, b->l, k);
   o->up();
 }
+void interval(node *&o, int l, int r) {
+  node *a, *b, *c; // b is [l, r)
+  o->down();
+  split2(o, a, b, l), split2(b, b, c, r - l);
+  /* operate */
+  o = merge(a, merge(b, c)), o->up();
+} // 868230
 node *kth(node *o, int k) {
+  o->down();
   if (k <= sz(o->l)) return kth(o->l, k);
   if (k == sz(o->l) + 1) return o;
   return kth(o->r, k - sz(o->l) - 1);
 }
 int Rank(node *o, int key) {
-  if (!o) return 0;
+  if (!o) return 0; o->down();
   if (o->data < key)
     return sz(o->l) + 1 + Rank(o->r, key);
   else return Rank(o->l, key);
@@ -59,11 +67,4 @@ void insert(node *&o, int k) {
   o->down(), split(o, a, b, k),
   o = merge(a, merge(new node(k), b));
   o->up();
-}
-void interval(node *&o, int l, int r) {
-  node *a, *b, *c; // [l, r)
-  o->down();
-  split2(o, a, b, l), split2(b, b, c, r - l);
-  // operate
-  o = merge(a, merge(b, c)), o->up();
-}
+} // 6de068
