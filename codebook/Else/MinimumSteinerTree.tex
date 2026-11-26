@@ -1,0 +1,8 @@
+$dp(v,S)$ : min cost of a tree rooted at $v$ containing all terminals in $S$.
+Enumerate masks $S$ in increasing order:
+$
+dp(v,S)=\min_{\emptyset\neq T\subsetneq S}
+\{dp(v,T)+dp(v,S\setminus T)\}.
+$
+Then run multi-source Dijkstra with initial distances $dp(v,S)$.
+$O(3^k n+2^k(m+n)\log n)$, where $k$ is the number of terminals.
