@@ -12,7 +12,7 @@ struct Matching { // 0-based
       t[x] = tk;
       x = Find(pre[match[x]]);
     }
-  }
+  } // 583caa
   void blossom(int x, int y, int l) {
     for (; Find(x) != l; x = pre[y]) {
       pre[x] = y, y = match[x];
@@ -43,7 +43,7 @@ struct Matching { // 0-based
       }
     }
     return false;
-  }
+  } // a2ffe4
   int solve() {
     int res = 0;
     for (int x = 0; x < n; ++x) if (match[x] == n)

@@ -22,7 +22,7 @@ struct MaxClique { // Maximum Clique
       for (int p = cs[k]._Find_first(); p < N;
                p = cs[k]._Find_next(p))
         r[t] = p, c[t] = k, t++;
-  }
+  } // c4fbeb
   void dfs(vector<int> &r, vector<int> &c, int l,
     bitset<N> mask) {
     while (!r.empty()) {
@@ -45,7 +45,7 @@ struct MaxClique { // Maximum Clique
       } else if (q > ans) ans = q, copy_n(cur, q, sol);
       c.pop_back(), q--;
     }
-  }
+  } // fedc9d
   int solve(bitset<N> mask = bitset<N>(
               string(N, '1'))) { // vertex mask
     vector<int> r, c;

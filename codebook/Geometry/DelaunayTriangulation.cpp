@@ -24,7 +24,7 @@ struct Delaunay { // 0-base
     head[v].push_front(Edge(u));
     head[u].begin()->twin = head[v].begin();
     head[v].begin()->twin = head[u].begin();
-  }
+  } // 4c73bf
   void divide(int l, int r) {
     if (l == r) return;
     if (l + 1 == r) return add_edge(l, l + 1);
@@ -38,7 +38,7 @@ struct Delaunay { // 0-base
           return nw[t] = it.id, true;
       }
       return false;
-    };
+    }; // ce4ab1
     while (gao(0) || gao(1));
     add_edge(nw[0], nw[1]); // add tangent
     while (true) {

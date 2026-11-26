@@ -19,7 +19,7 @@ struct DominatorTree {
       if (vis[u] == -1) dfs(u), pa[vis[u]] = vis[v];
       rg[vis[u]].pb(vis[v]);
     }
-  }
+  } // 4835fa
   void build(int s) {
     dfs(s);
     for (int i = id - 1; ~i; --i) {

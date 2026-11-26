@@ -18,7 +18,7 @@ struct BCC { // 0-based, remember to build
         }
       } else low[v] = min(low[v], dep[u]);
     }
-  }
+  } // d0cc2c
   bool is_cut(int x) { return sz(_g[x]) != 1; }
   vector <int> bcc(int id) { return _g[id + n]; }
   int bcc_id(int u, int v) {

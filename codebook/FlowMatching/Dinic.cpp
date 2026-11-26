@@ -20,7 +20,7 @@ struct Dinic { // 0-based
     }
     dis[u] = -1;
     return 0;
-  }
+  } // 033faf
   bool bfs() {
     dis.assign(n, -1);
     queue<int> q;

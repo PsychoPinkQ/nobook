@@ -20,7 +20,7 @@ struct slope_trick_convex {
   }
   //val[i]=min(val[j]) for all i-l<=j<=i+r
   void expand(T l, T r) {ground_l -= l, ground_r += r;}
-  void shift_up(T x) {minn += x;}
+  void shift_up(T x) {minn += x;} // 40f1ac
   T get_val(T x) {
     T l = left.top() + ground_l, r = right.top() + ground_r;
     if (x >= l && x <= r) return minn;
@@ -40,7 +40,7 @@ struct slope_trick_convex {
       }
       for (auto i : trash) left.push(i);
       return res;
-    }
+    } // b07d12
     if (x > r) {
       vector<T> trash;
       T cur_val = minn, slope = 1, res;

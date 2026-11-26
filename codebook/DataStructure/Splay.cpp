@@ -28,7 +28,7 @@ struct Splay {
       rotate(i);
     }
     rt = i;
-  }
+  } // 1f979b
   int lower_bound(int x) {
     int i = rt, last = -1;
     while (true) {
@@ -45,7 +45,7 @@ struct Splay {
     }
     splay(i);
     return last; // -1 if not found
-  }
+  } 
   void insert(int x) {
     int i = lower_bound(x);
     if (i == -1) {

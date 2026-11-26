@@ -20,7 +20,7 @@ template <typename T> struct P {
     return o << "(" << a.x << ", " << a.y << ")"; }
   bool operator == (P<T> o) {
     return sign(x - o.x) == 0 && sign(y - o.y) == 0;}
-};
+}; // e10feb (from `const`)
 using Pt = P<ll>;
 struct Line { Pt a, b; };
 struct Cir { Pt o; double r; };
@@ -42,7 +42,7 @@ bool same_vec(Line a, Line b, int d)
 { return same_vec(a.b - a.a, b.b - b.a, d); }
 Pt perp(Pt a) { return Pt(-a.y, a.x); } // CCW 90 deg
 Pt ref(Pt a) {return pos(a) == 1 ? Pt(-a.x, -a.y) : a;}
-// double part
+// double part; 089e97 (Pt to cmp) ; 8372a0 (Pt to ref)
 double theta(Pt a)
 { return normalize(atan2(a.y, a.x)); }
 Pt unit(Pt o) { return o / abs(o); }
@@ -52,4 +52,4 @@ Pt rot(Pt a, double o) // CCW
 Pt proj_vec(Pt a, Pt b, Pt c) // vector ac proj to ab
 {return (b - a) * ((c - a) * (b - a)) / (abs2(b - a));}
 Pt proj_pt(Pt a, Pt b, Pt c) // point c proj to ab
-{ return proj_vec(a, b, c) + a; }
+{ return proj_vec(a, b, c) + a; } // bfc6d2

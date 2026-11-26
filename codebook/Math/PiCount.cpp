@@ -17,7 +17,7 @@ void init(){
   for(int i = 0; i < M; ++i) dp[0][i] = i;
   for(int i = 1; i < N; ++i) for(int j = 0; j < M; ++j)
     dp[i][j] = dp[i - 1][j] - dp[i - 1][j / primes[i - 1]];
-}
+} // db77f3
 ll phi(ll n, int a){
   if(!a) return n;
   if(n < M && a < N) return dp[a][n];

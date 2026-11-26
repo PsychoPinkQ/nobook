@@ -15,7 +15,7 @@ void induce(int *sa, int *c, int *s, bool *t, int n, int z) {
   for (int i = n - 1; i >= 0; --i)
     if (sa[i] && t[sa[i] - 1])
       sa[--x[s[sa[i] - 1]]] = sa[i] - 1;
-}
+} // 160f40
 void sais(int *s, int *sa, int *p, int *q, bool *t, int *c, int n, int z) {
   bool uniq = t[n - 1] = true;
   int nn = 0, nmxz = -1, *nsa = sa + n, *ns = s + n, last = -1;
@@ -33,7 +33,7 @@ void sais(int *s, int *sa, int *p, int *q, bool *t, int *c, int n, int z) {
   for (int i = 1; i <= n - 1; ++i)
     if (t[i] && !t[i - 1])
       sa[--x[s[i]]] = p[q[i] = nn++] = i;
-  induce(sa, c, s, t, n, z);
+  induce(sa, c, s, t, n, z); // c0e9fb
   for (int i = 0; i < n; ++i)
     if (sa[i] && t[sa[i]] && !t[sa[i] - 1]) {
       bool neq = last < 0 || !equal(s + sa[i], s + p[q[sa[i]] + 1], s + last);

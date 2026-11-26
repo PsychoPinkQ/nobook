@@ -38,7 +38,7 @@ struct LCT {
   bool isrt(int i) {// rt of splay
     if (!pa[i]) return true;
     return ch[pa[i]][0] != i && ch[pa[i]][1] != i;
-  }
+  } // 39858a
   void rotate(int i) {
     int p = pa[i], x = ch[p][1] == i;
     int c = ch[i][!x], gp = pa[p];
@@ -71,7 +71,7 @@ struct LCT {
       ch[i][1] = last;
       pull(i), last = i, i = pa[i];
     }
-  }
+  } // 3acb2a
   void makert(int i) {
     access(i), splay(i), reverse(i);
   }

@@ -18,7 +18,7 @@ auto preprocess(auto pts) {
   for (int i = 0; i < sz(pts); i++)
     if (i != a && i != b && i != c) id.pb(i);
   return tuple{a, b, c, id};
-}
+} // af46c1
 // return the faces with pts indexes
 vector<Face> convex_hull_3D(vector<Pt> pts) {
   int n = sz(pts);

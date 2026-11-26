@@ -34,7 +34,7 @@ struct Simplex { // 0-based
     if (eq(c[y], 0)) return;
     k = c[y], c[y] = 0, v += k * b[x];
     for (int i : nz) c[i] -= k * a[x][i];
-  }
+  } // a2bdc1
   // 0: found solution, 1: no feasible solution, 2: unbounded
   int solve() {
     for (int i = 0; i < n; ++i) Down[i] = i;

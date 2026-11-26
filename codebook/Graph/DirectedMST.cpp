@@ -26,7 +26,7 @@ vector<int> dmst(vector<edge> &e, int n, int root) {
     for (int ox = x; x != y; ox = x)
       x = a[x], a[ox] = y;
     return y;
-  };
+  }; // b533b3
   v[root] = n + 1;
   int pc = n;
   for (int i = 0; i < n; ++i) if (v[i] == -1) {
